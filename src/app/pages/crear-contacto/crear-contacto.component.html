@@ -1,0 +1,41 @@
+<div class="contenido-crear">
+    <p>Crear Contacto</p>
+
+    <form [formGroup]="formularioCreado" >
+        <div class="formulario">
+        <div class="col-sm mb-3">
+            <label for="">Numero de identificacion</label>
+            <input type="number" class="form-control" formControlName="id">
+          </div>
+
+        <div class="col-sm mb-3">
+            <label for="">Nombre Completo</label>
+            <input type="text" class="form-control" formControlName="nombre">
+        </div>
+
+        <div class="col-sm mb-3">
+            <label for="">Celular</label>
+            <input type="number" class="form-control" formControlName="celular">
+        </div>
+       
+        <div class="col-sm mb-3">
+            <label for="">Direccion</label>
+            <input type="text" class="form-control" formControlName="direccion">
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de cumpleaños</mat-label>
+          <!-- #docregion toggle -->
+            <input matInput [matDatepicker]="picker" formControlName="cumpleanios">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          <!-- #enddocregion toggle -->
+          </mat-form-field>
+            </div>
+          <div class="d-flex justify-content-around acciones">
+            <button class="btn btn-primary" (click)="regresar()">Regresar</button>
+            <button class="btn btn-danger" (click)="limpiar()">Limpiar</button>
+            <button [disabled]="formularioCreado.invalid" (click)="guardar() " class="btn btn-success">Guardar</button>
+          </div>
+    </form>
+</div>

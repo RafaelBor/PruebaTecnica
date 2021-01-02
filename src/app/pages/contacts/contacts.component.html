@@ -1,0 +1,35 @@
+<div class="contenido-contacts">
+    <div class="botones-contacto">
+        <button [routerLink]="['/home']" class="btn btn-primary">Regresar</button>
+
+        <Button [routerLink]="['/crear-contacto']" class="btn btn-success">Nuevo Contacto</Button>
+    </div>
+
+    <form [formGroup]="" class="form-group">
+        <input class="form-control mt-3" (input)="buscarContactos($event)" placeholder="Buscar por nombre de contacto" type="text">
+    </form>
+
+    <div class="lista-contactos" *ngIf="contactos">
+        <div class="contacto" *ngFor="let contacto of contactos">
+            <div class="imagen-informacion">
+                <div class="contacto-imagen">
+                    <img src="../../../assets/contacto.png" alt="">
+                 </div>
+                <div class="info-contacto">
+                    <p class="nombre">{{contacto.nombre}}</p>
+                    <p>{{contacto.celular}}</p>
+                    <p>{{contacto.cumpleanios | date : 'longDate'}}</p>
+                </div>
+            </div>
+
+            <div class="acciones-contacto">
+                <button (click)="EditarContacto(contacto.id)" class="btn btn-primary mr-3">Editar</button>
+                <button (click)="eliminarContacto(contacto.id)" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sin-contactos" *ngIf="contactos.length == 0">
+        <p>Aun no tienes contactos agregados</p>
+    </div>
+</div>

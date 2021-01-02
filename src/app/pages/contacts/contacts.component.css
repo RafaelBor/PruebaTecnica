@@ -1,0 +1,140 @@
+img{
+    width: 100%;
+    max-width: 80px;
+    max-height: 80px;
+    align-items: center;
+}
+
+.contenido-contacts
+{   width: 700px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    
+}
+
+@media (max-width: 490px) { 
+    .contenido-contacts
+    {
+        width: 100%;
+        padding: 10px;
+    }
+   }
+
+.botones-contacto
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 490px) { 
+    .botones-contacto
+    {
+        display: block;
+    }
+
+    .botones-contacto button
+    {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+       
+    }
+   }
+
+.lista-contactos
+{
+    margin-top: 30px;
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    background-color: rgb(69, 134, 231);
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: white;
+}
+
+@media (max-width: 490px) { 
+    .contacto{
+        display: block;
+    }
+
+    .imagen-informacion{
+        display: block !important;
+        text-align: center;
+    }
+
+   }
+
+.acciones-contacto
+{
+    margin-right: 20px;
+}
+
+.imagen-informacion
+{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 490px) { 
+    .contacto-imagen img 
+    {
+        width: 100%;
+        object-fit: fill;
+        margin-top: 5px;
+    }
+
+   }
+
+.info-contacto
+{
+    text-align: left;
+}
+
+.info-contacto p{
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 490px) { 
+   .info-contacto{
+       text-align: center;
+   }
+
+   .acciones-contacto{
+       display: block;
+       margin: 0px;
+       padding: 5px;
+   }
+
+   .acciones-contacto button
+   {
+    display: block;
+    min-width: 100%;
+    margin-bottom: 5px;
+   }
+    
+   }
+
+.nombre{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contacto-imagen
+{
+    margin: 20px;
+}
+
+.sin-contactos
+{
+    text-align: center;
+}
+
+.sin-contactos p{
+    font-size: 25px;
+}
+

@@ -41,10 +41,15 @@ export class ContactsComponent implements OnInit {
   buscarContactos(event)
   {
    let nombreBuscar = event.target.value;
+   console.log("event.target.value");
+   console.log(event.target.value);
 
-    this.contactos = this._contactos.contactosLocalStorage.filter(x=> {
-      return x.nombre.toLocaleLowerCase().includes(nombreBuscar)
-    })
+   
+      this.contactos = this._contactos.contactosLocalStorage.filter(x=> {
+        return x.nombre.toLocaleLowerCase().includes(nombreBuscar)
+      })
+  
+   
   }
 
 }
